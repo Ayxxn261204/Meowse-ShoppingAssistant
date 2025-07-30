@@ -1,0 +1,273 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  width: 350px;
+  padding: 15px;
+  margin: 0;
+  color: #333;
+}
+
+:root {
+  --cat-primary: #FF6B35; /* Bright orange cat color */
+  --cat-secondary: #E24E1B; /* Darker orange for hover */
+  --cat-accent: #662E1C; /* Brown accent for headings */
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+h1 {
+  font-size: 1.3em;
+  margin: 0 0 10px 0;
+  color: var(--cat-accent);
+}
+
+h2 {
+  font-size: 1.1em;
+  margin: 0 0 8px 0;
+  color: var(--cat-accent);
+  border-bottom: 1px solid #eee;
+  padding-bottom: 5px;
+}
+
+button {
+  background: var(--cat-primary);
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+button:hover {
+  background: var(--cat-secondary);
+}
+
+.hidden {
+  display: none !important;
+}
+
+#loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.spinner {
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #4285f4;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  animation: spin 1s linear infinite;
+  margin-bottom: 15px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+#error-container {
+  background-color: #ffebee;
+  border-left: 4px solid #f44336;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 2px;
+}
+
+.error-message {
+  color: #d32f2f;
+  font-size: 0.9em;
+}
+
+.section {
+  background: #fff;
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12);
+}
+
+/* Safety section styles */
+.safety-indicator {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 5px;
+  border-radius: 4px;
+}
+
+.safety-indicator.safe {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+}
+
+.safety-indicator.unsafe {
+  background-color: #ffebee;
+  color: #c62828;
+}
+
+.safety-icon {
+  font-size: 1.2em;
+  margin-right: 8px;
+}
+
+.trust-score {
+  margin: 8px 0;
+}
+
+.threats ul, .pros ul, .cons ul {
+  margin: 5px 0;
+  padding-left: 20px;
+}
+
+.threats li, .pros li, .cons li {
+  padding: 6px;
+  margin-bottom: 6px;
+}
+
+/* Price section styles */
+.deal-badge {
+  display: inline-block;
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-size: 0.85em;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.good-deal {
+  background-color: #e8f5e9;
+  color: var(--cat-secondary);
+}
+
+.average-deal {
+  background-color: #fff3e0;
+  color: #ef6c00;
+}
+
+.bad-deal {
+  background-color: #ffebee;
+  color: #c62828;
+}
+
+.better-deals ul {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0;
+}
+
+.better-deals li {
+  padding: 10px;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.deal-store {
+  font-weight: bold;
+}
+
+.deal-price {
+  color: #2e7d32;
+  font-weight: bold;
+}
+
+.deal-savings {
+  color: #2e7d32;
+  font-size: 0.9em;
+  margin: 3px 0;
+}
+
+.deal-link {
+  display: inline-block;
+  margin-top: 5px;
+  color: var(--cat-primary);
+  text-decoration: none;
+  font-size: 0.9em;
+}
+
+.deal-link:hover {
+  text-decoration: underline;
+}
+
+/* Review section styles */
+.rating-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.stars {
+  color: #ffc107;
+  font-size: 1.2em;
+  margin-right: 8px;
+}
+
+.rating-number {
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+.total-reviews {
+  color: #757575;
+  font-size: 0.9em;
+}
+
+.review-trust-score {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid #f0f0f0;
+}
+
+.pros strong, .cons strong {
+  color: #2c3e50;
+}
+
+.suspicious-patterns {
+  background-color: #fff8e1;
+  padding: 8px;
+  border-radius: 4px;
+  margin-top: 10px;
+}
+
+.no-rating {
+  color: #9e9e9e;
+  font-style: italic;
+}
+
+#initial-state {
+  text-align: center;
+  color: #757575;
+  padding: 30px 15px;
+}
+
+.footer {
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#options-btn {
+  background-color: #f5f5f5;
+  color: #333;
+  font-size: 0.9em;
+  padding: 6px 12px;
+}
+
+#options-btn:hover {
+  background-color: #e0e0e0;
+}
+
+#status-message {
+  color: #f57c00;
+  font-size: 0.85em;
+}

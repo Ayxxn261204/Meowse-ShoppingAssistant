@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Meowse Options</title>
+  <link rel="stylesheet" href="options.css">
+</head>
+<body>
+  <div class="container">
+    <h1>🐱Meowse Options</h1>
+    
+    <div class="section">
+      <h2>API Configuration</h2>
+      <div class="form-group">
+        <label for="api-key">OpenRouter API Key:</label>
+        <input type="password" id="api-key" placeholder="Enter your OpenRouter API key" />
+        <button id="show-key">👁️</button>
+      </div>
+      <p class="info-text">Your API key is stored locally in your browser and is never sent to our servers.</p>
+      <p class="info-text">Don't have an API key? Get one for free at <a href="https://openrouter.ai" target="_blank">OpenRouter.ai</a></p>
+    </div>
+    
+    <div class="section">
+      <h2>Model Selection</h2>
+      <div class="form-group">
+        <label for="model-select">Select AI Model:</label>
+        <select id="model-select">
+          <option value="openai/gpt-3.5-turbo">GPT-3.5 Turbo (Balanced)</option>
+          <option value="anthropic/claude-instant-v1">Claude Instant (Cheaper)</option>
+          <option value="google/palm-2-chat-bison">PaLM 2 (Faster)</option>
+          <option value="meta-llama/llama-2-13b-chat">Llama 2 13B (Free Tier)</option>
+        </select>
+      </div>
+      <p class="info-text">Different models have different capabilities and costs. Free tier models may have limitations.</p>
+    </div>
+    
+    <div class="section">
+      <h2>Data Caching</h2>
+      <div class="form-group">
+        <label for="cache-toggle">Enable Data Caching:</label>
+        <label class="switch">
+          <input type="checkbox" id="cache-toggle" checked>
+          <span class="slider round"></span>
+        </label>
+      </div>
+      <p class="info-text">Caching reduces API calls by storing analysis results temporarily.</p>
+      <button id="clear-cache">Clear Cache</button>
+    </div>
+    
+    <div class="actions">
+      <div id="status-message"></div>
+      <button id="save-btn">Save Settings</button>
+    </div>
+  </div>
+  
+  <script src="options.js"></script>
+</body>
+</html>

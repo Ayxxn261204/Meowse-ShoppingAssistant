@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="header">
+    <h1>🐱Meowse</h1>
+    <button id="analyze-btn">Analyze This Product</button>
+  </div>
+  
+  <div id="loading" class="hidden">
+    <div class="spinner"></div>
+    <p>Analyzing product...</p>
+  </div>
+  
+  <div id="error-container" class="hidden">
+    <div class="error-message"></div>
+  </div>
+  
+  <div id="results-container" class="hidden">
+    <div class="section safety-section">
+      <h2>Safety Check</h2>
+      <div id="safety-results"></div>
+    </div>
+    
+    <div class="section product-safety-section hidden">
+      <h2>Product Authenticity</h2>
+      <div id="product-safety-results"></div>
+    </div>
+    
+    <div class="section price-section">
+      <h2>Price Analysis</h2>
+      <div id="price-results"></div>
+    </div>
+    
+    <div class="section reviews-section">
+      <h2>Review Summary</h2>
+      <div id="review-results"></div>
+    </div>
+  </div>
+  
+  <div id="initial-state">
+    <p>Click the button above to analyze the current product</p>
+  </div>
+  
+  <div class="footer">
+    <button id="options-btn">Options</button>
+    <span id="status-message" class="hidden"></span>
+  </div>
+  
+  <script src="popup.js"></script>
+</body>
+</html>
